@@ -73,7 +73,7 @@ export default {
   .btn-block {
     text-align: center;
     position: absolute;
-    height: 11%;
+    height: 13%;
     width: 96%;
     bottom: 1%;
     left: 2%;

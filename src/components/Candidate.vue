@@ -31,7 +31,7 @@ export default {
 <style lang="scss">
   .candidate-block {
     position: absolute;
-    height: 85%;
+    height: 83%;
     width: 96%;
     top: 1%;
     left: 2%;
