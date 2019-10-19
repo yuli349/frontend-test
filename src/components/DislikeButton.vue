@@ -1,6 +1,6 @@
 <template>
   <div class="dislike" @click.prevent="dislike">
-    dislike
+    <span class="icon"></span>
   </div>
 </template>
 <script>
@@ -12,7 +12,20 @@ export default {
 </script>
 <style lang="scss">
   .dislike {
-    border: 1px solid red;
-    padding: 10px;
+    border-radius: 50%;
+    background: #dfdfdf;
+    padding: 15px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 20px;
+    text-align: center;
+    & .icon {
+      background: url("../assets/close-cross.png") no-repeat;
+      width: 30px;
+      height: 30px;
+      display: block;
+      background-size: 100%;
+    }
   }
 </style>

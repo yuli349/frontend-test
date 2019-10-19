@@ -1,15 +1,17 @@
 <template>
   <div>
-    <div v-if="candidate.loading">
+    <div class="loading" v-if="candidate.loading">
       <img src="../assets/loader.gif" alt="">
     </div>
     <div v-else>
       <div v-if="candidate.unvaluedList.length > 0">
         <candidate></candidate>
-        <like-button></like-button>
-        <dislike-button></dislike-button>
+        <div class="btn-block">
+          <like-button></like-button>
+          <dislike-button></dislike-button>
+        </div>
       </div>
-      <div v-else>
+      <div class="empty" v-else>
         Извините, больше совпадений не найдено
       </div>
     </div>
@@ -40,3 +42,40 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+  .empty {
+    position: absolute;
+    text-align: center;
+    color: #00b0ff;
+    width: 300px;
+    font-size: 20px;
+    padding: 10px;
+    font-family: sans-serif;
+    top: 50%;
+    left: 50%;
+    margin-left: -160px;
+    margin-top: -33px;
+  }
+  .loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -32px;
+      margin-left: -32px;
+    }
+  }
+  .btn-block {
+    text-align: center;
+    position: absolute;
+    height: 11%;
+    width: 96%;
+    bottom: 1%;
+    left: 2%;
+  }
+</style>
